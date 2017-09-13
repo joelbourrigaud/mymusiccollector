@@ -39,6 +39,7 @@ VPATH := $(SRC_PATH)
 
 
 # Include other makefile
+include $(MAKEFILE_PATH)/process.prepare.mk	
 include $(MAKEFILE_PATH)/process.compile.mk	
 
 display-var:
