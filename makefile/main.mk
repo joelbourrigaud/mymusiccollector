@@ -4,7 +4,15 @@ CC = gcc
 
 
 LIBS =
-CFLAGS = -Wall
+CFLAGS.dbg = -Wall -g
+CFLAGS.rel = -Wall
+
+ifeq ($(ENV),dbg)
+  CFLAGS = $(CFLAGS.dbg)
+else
+  CFLAGS = $(CFLAGS.rel)
+endif
+
 
 BASE_DIR = .
 MAKEFILE_DIR = makefile
